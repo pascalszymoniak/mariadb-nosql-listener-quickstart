@@ -54,7 +54,7 @@ export default class Dashboard extends Component {
 
     async saveTask(task) {
         var res = null;
-        if (task !== null && task.id != undefined) {
+        if (task !== null && task.id !== undefined) {
             res = await fetch(this.todo_api_url,{
                 method: 'PUT',
                 body: JSON.stringify(task),
